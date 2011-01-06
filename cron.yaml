@@ -1,0 +1,4 @@
+cron:
+- description: hourly price check
+  url: /autocheck
+  schedule: every 1 hours

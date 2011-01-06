@@ -1,0 +1,17 @@
+application: nightwtch
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /admin
+  script: nwtch.py
+  login: admin
+
+- url: /autocheck
+  script: nwtch.py
+  login: admin
+
+- url: /.*
+  script: nwtch.py
+  login: required

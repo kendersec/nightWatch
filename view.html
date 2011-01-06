@@ -1,0 +1,42 @@
+<html>
+<body>
+  <h1>Title</h1>
+  <a href="/gistr.ics">Get ICS</a>
+  <h2>Result:</h2>
+  <table>
+    <tr>
+      <th>date</th>
+      <th>hours</th>
+      <th>lenght</th>
+      <th>cours</th>
+      <th>trainees</th>
+      <th>professor</th>
+      <th>room</th>
+    </tr>
+    {% for event in events %}
+      {% if event %}
+    <tr>
+      <td>{{ event.0 }}</td>
+      <td>{{ event.1 }}</td>
+      <td>{{ event.2 }}</td>
+      <td>{{ event.3 }}</td>
+      <td>{{ event.4 }}</td>
+      <td>{{ event.5 }}</td>
+      <td>{{ event.6 }}</td>
+    </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
+  
+  <h2>other:</h2>
+  <pre>status: {{ status }}</pre>
+  <h2>header:</h2>
+  <pre>{{ header }}</pre>
+  <h2>content:</h2>
+  <pre>{{ content }}</pre>
+  <h2>parser:</h2>
+  <pre>{{ parseres }}</pre>
+  <h2>Session ID:</h2>
+  <pre>{{ id }}</pre>
+</body>
+</html>
